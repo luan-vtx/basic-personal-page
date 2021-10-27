@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+:root {
+  --color-orage: rgb(255, 208, 0);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +12,8 @@
 
 body {
   background-color: #282a36;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: aliceblue;
 }
 
 header {
@@ -15,11 +22,11 @@ header {
   background: rgba(0, 0, 0, 0.1);
 }
 
-header div {
+.links {
   text-align: center;
 }
 
-header div a {
+.links a {
   color: white;
   text-decoration: none;
   padding: 0 30px;
@@ -28,7 +35,47 @@ header div a {
   margin: 0 16px;
 }
 
-header div a:hover {
-  color: #fcd705;
+.links a:hover {
+  color: var(--color-orage);
   transition: color 700ms;
+}
+
+#wrapper {
+  text-align: center;
+  padding: 32px;
+}
+
+#wrapper img {
+  border-radius: 50%;
+  border: 5px solid var(--color-orage);
+  margin-bottom: 22px;
+  width: 350px;
+}
+
+#wrapper h1 {
+  font-size: 32px;
+  line-height: 52px;
+  font-weight: 900;
+}
+
+#wrapper h2 {
+  font-size: 20px;
+  line-height: 34px;
+  font-weight: 700;
+  margin-top: 8px;
+  opacity: 0.8;
+}
+
+#wrapper p {
+  max-width: 500px;
+  margin: 16px auto;
+  font-size: 16px;
+}
+
+#wrapper p a {
+  color: var(--color-orage);
+}
+
+#links-footer a {
+  border-bottom: 1px solid var(--color-orage);
 }
