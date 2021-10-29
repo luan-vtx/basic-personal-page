@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
 
 :root {
-  --color-orage: rgb(255, 208, 0);
+  --color-yellow: rgb(255, 230, 0);
+  --color-violet: #271e47;
+  --color-grey: rgba(196, 196, 196, 0.9);
+  --color-green: rgb(26, 202, 3);
 }
 
 * {
@@ -36,7 +39,7 @@ header {
 }
 
 .links a:hover {
-  color: var(--color-orage);
+  color: var(--color-yellow);
   transition: color 700ms;
 }
 
@@ -47,7 +50,7 @@ header {
 
 #wrapper img {
   border-radius: 50%;
-  border: 5px solid var(--color-orage);
+  border: 5px solid var(--color-yellow);
   margin-bottom: 22px;
   width: 350px;
 }
@@ -73,9 +76,92 @@ header {
 }
 
 #wrapper p a {
-  color: var(--color-orage);
+  color: var(--color-yellow);
 }
 
 #links-footer a {
-  border-bottom: 1px solid var(--color-orage);
+  border-bottom: 1px solid var(--color-yellow);
+}
+
+/* ===== CARDS ====== */
+
+.cards {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--color-violet);
+}
+
+.card:hover {
+  box-shadow: 0 0 1em var(--color-grey);
+  transition: 400ms;
+}
+
+.card_image-container img {
+  width: 100%;
+}
+
+.card_content,
+.card_info {
+  padding: 24px;
+}
+
+.card_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card_description {
+  background-color: var(--color-violet);
+  filter: brightness(90%);
+  padding: 5px 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* ===== MODAL ======= */
+
+.modal_overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  margin: 5vh auto;
+  position: relative;
+}
+
+.modal .close_modal {
+  color: black;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+
+/* ===== MODAL.ACTIVE ======= */
+
+.modal_overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+iframe {
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  top: 5vh;
 }
